@@ -1,0 +1,252 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Md Integrations
+meta:
+  id: wrk_8f62dd6f87c04b49bc1cb84481a0caab
+  created: 1772749612711
+  modified: 1772749612711
+  description: ""
+collection:
+  - name: Person
+    meta:
+      id: fld_1197fc7ff36c4774a425fb118591222a
+      created: 1770753226258
+      modified: 1772749623830
+      sortKey: -1770753226258
+      description: ""
+    children:
+      - url: "{{ _.base_url }}v1/people"
+        name: Index
+        meta:
+          id: req_bd5d432e8a614e4c81219f026c7bd8aa
+          created: 1770753254579
+          modified: 1772748491950
+          isPrivate: false
+          description: ""
+          sortKey: -1770753254579
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}v1/people"
+        name: Store
+        meta:
+          id: req_7723197301e24ff0b2bdae5cf5b099db
+          created: 1772748499524
+          modified: 1772748740311
+          isPrivate: false
+          description: ""
+          sortKey: -1769791840282.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "name": "Lucas Silva",
+                "email": "lucas@exemplo.com",
+                "age": 25
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}v1/people/2"
+        name: Show
+        meta:
+          id: req_b923809216584570a334dc8a14c919cf
+          created: 1772750007954
+          modified: 1772750392668
+          isPrivate: false
+          description: ""
+          sortKey: -1769311133134.25
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "name": "Lucas Silva",
+                "email": "lucas@exemplo.com",
+                "age": 25
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}v1/people/2"
+        name: Update
+        meta:
+          id: req_0eed40c7d53146f2991cd8106ab0b48f
+          created: 1772750033522
+          modified: 1772750385809
+          isPrivate: false
+          description: ""
+          sortKey: -1769190956347.1875
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+                "name": "Lucas Silva editado",
+                "email": "lucas@exemplo.com",
+                "age": 19
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}v1/people/1"
+        name: Destroy
+        meta:
+          id: req_c67afda40e7144a09599233d1a21a76f
+          created: 1772750149240
+          modified: 1772750159473
+          isPrivate: false
+          description: ""
+          sortKey: -1769010691166.5938
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+          - name: Accept
+            value: application/json
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0a5030eeeaf742b79708872585dd1014
+    created: 1746369733802
+    modified: 1772748716638
+  cookies:
+    - id: 10afb9ff-2a69-4654-b7ac-379ee600949b
+      key: KEYCLOAK_LOCALE
+      value: ""
+      domain: localhost
+      path: /realms/YETZ/
+      secure: false
+      httpOnly: true
+      extensions:
+        - Version=1
+        - Comment=Expiring cookie
+      hostOnly: true
+    - id: c0e6576f-887c-432f-b43a-0a3c396d52c7
+      key: KC_RESTART
+      value: ""
+      domain: localhost
+      path: /realms/YETZ/
+      secure: false
+      httpOnly: true
+      extensions:
+        - Version=1
+      hostOnly: true
+    - id: af6a60c8-9cf1-43a3-99cc-9bf83598d70b
+      key: KC_AUTH_STATE
+      value: ""
+      domain: localhost
+      path: /realms/YETZ/
+      secure: false
+      httpOnly: false
+      extensions:
+        - Version=1
+      hostOnly: true
+    - id: 86400df8-d8a6-40a7-ae60-665ad80d6bf4
+      key: XSRF-TOKEN
+      value: eyJpdiI6IjNnblQ2Y3FZc09HbitvS0RyT0xEd1E9PSIsInZhbHVlIjoiM2dtcnRRa0dIT2VreXI3a2hYNGRMUDRWZkNHTmVialQwdTBFZTA2RWVqZjdlOVVVSG8xdGdNQ3YrSjJ2NmUydFF4ajhITVM2b0VKYW5QbXJ0SWF1Q05uQm4wQ0hjN2owa0RUOUZ2TGlYZWNwODlmMkxpYWx4a01YNUx4WThFMFAiLCJtYWMiOiI2ZGZkNmIzOTY0NzZiZGUyZmM3NDlmMTk1ODBhMDJmNjlhODQ4ZDhkNTNiNTIwYjFhNTk5ZmZkYmY2YmFmOTQ2IiwidGFnIjoiIn0%3D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: false
+      hostOnly: true
+    - id: 8511314d-6cdb-42ab-a4f4-53f5bb3b6d7d
+      key: laravel-session
+      value: eyJpdiI6IkNVWnVmTWtBYjgxanIveUpsZVNJd2c9PSIsInZhbHVlIjoiVk02NURydjdETC9hc1VvclQ0YS80V2h2TlZHTnhITi9NM0FYTGdlMGdHd2k3N0JLR0NIZVcvd2Z1SUpya3NSS0N1Wm5yOUdmdnliTlVFaHdLcUZ1NTFoaEk1WmU5YzN6L2dtbHZ1aWk0eEN2eEpuUjk3eUl6VlJXdmV2LzNCSEoiLCJtYWMiOiIwMWU5NjMwZmFhZGU3MTcwMjk2ODY0ODI3NzJkNmJjNTgxZmYyMjRjMjJmMGFkNWIxODdmNGYzMDg0NzZjZWExIiwidGFnIjoiIn0%3D
+      domain: localhost
+      path: /
+      secure: false
+      httpOnly: true
+      hostOnly: true
+environments:
+  name: Base Environment
+  meta:
+    id: env_a1598ab1924a4370a3a6b9f10a822a87
+    created: 1746369733798
+    modified: 1746369733798
+    isPrivate: false
+  subEnvironments:
+    - name: Localhost
+      meta:
+        id: env_e0c9d63de47f4cff9d946bbb3272ff36
+        created: 1746369790909
+        modified: 1772747586938
+        isPrivate: false
+        sortKey: 1746369790909
+      data:
+        base_url: http://localhost:8000/api/
+        token: "{% response 'body', 'req_ce3bc54ea17046f78a7fc9c623f99818',
+          'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+      color: "#5eda0b"

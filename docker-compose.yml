@@ -1,0 +1,20 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: md-integrations-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+      - sqlite-data:/var/www/html/database
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlite
+    restart: unless-stopped
+
+volumes:
+  sqlite-data:
+    driver: local
